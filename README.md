@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Test Técnico: Desarrollador Front-End Junior
 
-## Getting Started
+El objetivo de este test técnico es construir una aplicación web siguiendo un diseño específico proporcionado en Figma y consumiendo datos de una API pública de cervecerías.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Exploración de Cervecerías**: Descubre una lista de las mejores cervecerías de todo el mundo.
+- **Detalles de Cervecerías**: Obtén información detallada sobre cada cervecería, incluyendo su dirección y número de teléfono.
+- **Opciones en California**: Explora las cervecerías ubicadas en California de una manera rápida y sencilla.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalación
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clona este repositorio en tu máquina local.
+2. Navega hasta el directorio del proyecto.
+3. Instala las dependencias usando `npm install`.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Uso
 
-## Learn More
+1. Ejecuta el proyecto usando `npm start`.
+2. Abre tu navegador y visita `http://localhost:3000`.
 
-To learn more about Next.js, take a look at the following resources:
+## Contacto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto conmigo en [sotodeborahcaro@gmail.com].
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+¡Saludos!

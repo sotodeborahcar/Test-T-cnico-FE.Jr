@@ -1,5 +1,8 @@
 "use client";
 
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+
 import {
   Flex,
   Box,
@@ -51,7 +54,32 @@ const Card = ({ heading, direction, tel }: CardProps) => {
   );
 };
 
-export default function SignPage() {
+const BreweryDetails = () => {
+  const router = useRouter();
+  const { id } = router.query;
+  const [brewery, setBrewery] = useState(null);
+
+  useEffect(() => {
+    const fetchBreweryDetails = async () => {
+      try {
+        const response = await fetch(
+          `https://api.openbrewerydb.org/breweries/${id}`
+        );
+        const data = await response.json();
+        setBrewery(data);
+      } catch (error) {
+        console.error("Error fetching brewery details:", error);
+      }
+    };
+
+    if (id) {
+      fetchBreweryDetails();
+    }
+  }, [id]);
+
+  if (!brewery) {
+    return <div>Loading...</div>;
+  }
   return (
     <Flex
       minH={"100vh"}
@@ -62,10 +90,11 @@ export default function SignPage() {
       <Container maxW={"5xl"} mt={1}>
         <Flex flexWrap="wrap" gridGap={6} justify="center">
           <Card
-            heading={"Bar Nim"}
-            direction={"Havre 73, Juárez, Cuauhtémoc"}
-            tel={42358766}
-            href={"#"}
+            heading={brewery.name}
+            direction={brewery.street}
+            tel={brewery.phone}
+            // href={"#"}
+            href={`/breweries/${brewery.id}`}
           />
         </Flex>
         <Stack
@@ -102,4 +131,6 @@ export default function SignPage() {
       <Testimonial />
     </Flex>
   );
-}
+};
+
+export default BreweryDetails;

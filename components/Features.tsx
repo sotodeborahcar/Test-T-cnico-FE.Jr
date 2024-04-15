@@ -153,7 +153,7 @@ export default function Feature() {
                 icon={<Icon as={FcAssistant} w={10} h={10} />}
                 direction={brewery.street}
                 tel={brewery.phone}
-                href={"/pagedate"}
+                href={`/breweries/${brewery.id}`}
               />
             </Flex>
           ))}
@@ -186,7 +186,7 @@ export default function Feature() {
                 icon={<Icon as={FcAssistant} w={10} h={10} />}
                 direction={brewery2.street}
                 tel={brewery2.phone}
-                href={"/pagedate"}
+                href={`/breweries/${brewery2.id}`}
               />
             </Flex>
           ))}
